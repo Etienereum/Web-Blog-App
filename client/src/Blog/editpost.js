@@ -38,7 +38,6 @@ const EditPost = (props) => {
       uid: user_id,
       username: username,
     };
-
     axios
       .put("/api/put/post", data)
       .then((res) => console.log(res))

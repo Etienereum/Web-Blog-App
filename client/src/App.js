@@ -1,29 +1,10 @@
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import React from "react";
+import ContextState from "./context_state_config";
 
-// function App() {
-//   return (
-
-//   );
-// }
-
-// export default App;
-
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-const App = (props) => {
-  useEffect(() => {
-    axios.get("/api/hello").then((res) => setState(res.data));
-  }, []);
-
-  const [state, setState] = useState("");
-
+const App = () => {
   return (
     <div>
-      Home
-      <p>{state}</p>
+      <ContextState />
     </div>
   );
 };

@@ -12,6 +12,7 @@ const AuthCheck = () => {
       const profile = context.authObj.userProfile;
       context.handleUserLogin();
       context.handleUserAddProfile(profile);
+
       axios
         .post("/api/posts/userprofiletodb", profile)
         .then(
@@ -22,6 +23,7 @@ const AuthCheck = () => {
             .then((res) => context.handleAddDBProfile(res.data))
         )
         .then(history.replace("/"));
+      console.log("userprofiletodb posted");
     } else {
       context.handleUserLogout();
       context.handleUserRemoveProfile();
